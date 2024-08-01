@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-message-table
+      author: liquibase
+      changes:
+        - createTable:
+            tableName: message
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: sender
+                  type: varchar
+              - column:
+                  name: text
+                  type: varchar
+              - column:
+                  name: sent_date_time
+                  type: datetime
+              - column:
+                  name: snapshot_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_snapshot_id
+                    references: snapshot(id)

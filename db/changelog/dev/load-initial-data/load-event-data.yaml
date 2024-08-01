@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: load-device-data
+      author: liquibase
+      changes:
+        - sqlFile:
+            path: sql/insert-events.sql
+            relativeToChangelogFile: true

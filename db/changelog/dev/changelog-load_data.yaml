@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - include:
+      file: load-initial-data/load-device-data.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: load-initial-data/load-stage-data.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: load-initial-data/load-event-data.yaml
+      relativeToChangelogFile: true

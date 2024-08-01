@@ -1,0 +1,48 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-diagnostic-table
+      author: liquibase
+      changes:
+        - createTable:
+            tableName: diagnostic
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: measure_time
+                  type: datetime
+              - column:
+                  name: battery_percentage
+                  type: double
+              - column:
+                  name: temperature
+                  type: double
+              - column:
+                  name: current
+                  type: double
+              - column:
+                  name: voltage
+                  type: double
+              - column:
+                  name: event_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_event_id
+                    references: event(id)
+              - column:
+                  name: device_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_device_id
+                    references: device(id)
+              - column:
+                  name: stage_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_stage_id
+                    references: stage(id)

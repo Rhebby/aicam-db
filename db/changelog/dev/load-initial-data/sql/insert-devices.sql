@@ -1,0 +1,10 @@
+INSERT INTO device (name, serial_number) VALUES ('Device 1', '11111111');
+INSERT INTO device (name, serial_number) VALUES ('Device 2', '22222222');
+INSERT INTO device (name, serial_number) VALUES ('Device 3', '33333333');
+INSERT INTO device (name, serial_number) VALUES ('Device 4', '44444444');
+INSERT INTO device (name, serial_number) VALUES ('Device 5', '55555555');
+INSERT INTO device (name, serial_number) VALUES ('Device 6', '66666666');
+INSERT INTO device (name, serial_number) VALUES ('Device 7', '77777777');
+INSERT INTO device (name, serial_number) VALUES ('Device 8', '88888888');
+INSERT INTO device (name, serial_number) VALUES ('Device 9', '99999999');
+INSERT INTO device (name, serial_number) VALUES ('Device 10', '10101010');

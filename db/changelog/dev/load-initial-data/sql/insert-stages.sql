@@ -1,0 +1,13 @@
+INSERT INTO stage (name, length) VALUES ('Stage 1', 12.50);
+INSERT INTO stage (name, length) VALUES ('Stage 2', 2.22);
+INSERT INTO stage (name, length) VALUES ('Stage 3', 13.31);
+INSERT INTO stage (name, length) VALUES ('Stage 4', 11.54);
+INSERT INTO stage (name, length) VALUES ('Stage 5', 8.23);
+INSERT INTO stage (name, length) VALUES ('Stage 6', 7.32);
+INSERT INTO stage (name, length) VALUES ('Stage 7', 9.32);
+INSERT INTO stage (name, length) VALUES ('Stage 8', 9.76);
+INSERT INTO stage (name, length) VALUES ('Stage 9', 4.86);
+INSERT INTO stage (name, length) VALUES ('Stage 10', 3.72);
+INSERT INTO stage (name, length) VALUES ('Stage 11', 4.42);
+INSERT INTO stage (name, length) VALUES ('Stage 12', 3.76);
+INSERT INTO stage (name, length) VALUES ('Stage 13', 6.23);

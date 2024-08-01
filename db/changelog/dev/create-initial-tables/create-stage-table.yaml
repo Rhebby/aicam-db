@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-stage-table
+      author: liquibase
+      changes:
+        - createTable:
+            tableName: stage
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar
+              - column:
+                  name: length
+                  type: double

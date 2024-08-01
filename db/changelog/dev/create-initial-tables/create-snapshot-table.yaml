@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-snapshot-table
+      author: liquibase
+      changes:
+        - createTable:
+            tableName: snapshot
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: longitude
+                  type: double
+              - column:
+                  name: latitude
+                  type: double
+              - column:
+                  name: detection_time
+                  type: datetime
+              - column:
+                  name: path_to_image
+                  type: varchar
+              - column:
+                  name: device_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_device_id
+                    references: device(id)
+              - column:
+                  name: stage_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_stage_id
+                    references: stage(id)
+              - column:
+                  name: event_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_event_id
+                    references: event(id)

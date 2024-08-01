@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-event-table
+      author: liquibase
+      changes:
+        - createTable:
+            tableName: event
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar
+              - column:
+                  name: start_date_time
+                  type: datetime
+              - column:
+                  name: end_date_time
+                  type: datetime

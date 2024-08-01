@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-device-table
+      author: liquibase
+      changes:
+        - createTable:
+            tableName: device
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: serial_number
+                  type: varchar
+              - column:
+                  name: name
+                  type: varchar

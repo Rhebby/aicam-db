@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - include:
+      file: create-initial-tables/create-device-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: create-initial-tables/create-stage-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: create-initial-tables/create-event-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: create-initial-tables/create-diagnostic-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: create-initial-tables/create-snapshot-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: create-initial-tables/create-message-table.yaml
+      relativeToChangelogFile: true
