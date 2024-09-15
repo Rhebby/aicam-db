@@ -23,8 +23,8 @@ databaseChangeLog:
                   name: sent_date_time
                   type: datetime
               - column:
-                  name: snapshot_id
+                  name: alert_id
                   type: bigint
                   constraints:
-                    foreignKeyName: fk_snapshot_id
-                    references: snapshot(id)
+                    foreignKeyName: fk_alert_id
+                    references: alert(id)

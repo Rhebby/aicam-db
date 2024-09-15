@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-alert-table
+      author: liquibase
+      changes:
+        - createTable:
+            tableName: alert
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: resolved
+                  type: boolean

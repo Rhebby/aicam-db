@@ -12,6 +12,9 @@ databaseChangeLog:
       file: create-initial-tables/create-diagnostic-table.yaml
       relativeToChangelogFile: true
   - include:
+      file: create-initial-tables/create-alert-table.yaml
+      relativeToChangelogFile: true
+  - include:
       file: create-initial-tables/create-snapshot-table.yaml
       relativeToChangelogFile: true
   - include:

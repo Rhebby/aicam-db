@@ -43,3 +43,9 @@ databaseChangeLog:
                   constraints:
                     foreignKeyName: fk_event_id
                     references: event(id)
+              - column:
+                  name: alert_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_alert_id
+                    references: alert(id)
