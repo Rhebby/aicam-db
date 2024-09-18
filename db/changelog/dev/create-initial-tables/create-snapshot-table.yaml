@@ -26,6 +26,9 @@ databaseChangeLog:
                   name: path_to_image
                   type: varchar
               - column:
+                  name: reviewed
+                  type: boolean
+              - column:
                   name: device_id
                   type: bigint
                   constraints:
