@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
-      id: create-snapshot-table
+      id: create-marker-table
       author: liquibase
       changes:
         - createTable:
-            tableName: snapshot
+            tableName: marker
             columns:
               - column:
                   name: id
@@ -14,35 +14,23 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: longitude
-                  type: double
+                  name: velocity
+                  type: bigint
+              - column:
+                  name: age
+                  type: bigint
+              - column:
+                  name: temperature
+                  type: bigint
+              - column:
+                  name: battery
+                  type: varchar
               - column:
                   name: latitude
                   type: double
               - column:
-                  name: detection_time
-                  type: datetime
-              - column:
-                  name: path_to_image
-                  type: varchar
-              - column:
-                  name: reviewed
-                  type: boolean
-              - column:
-                  name: timestamp
+                  name: longitude
                   type: double
-              - column:
-                  name: device_id
-                  type: bigint
-                  constraints:
-                    foreignKeyName: fk_device_id
-                    references: device(id)
-              - column:
-                  name: stage_id
-                  type: bigint
-                  constraints:
-                    foreignKeyName: fk_stage_id
-                    references: stage(id)
               - column:
                   name: event_id
                   type: bigint
@@ -50,8 +38,14 @@ databaseChangeLog:
                     foreignKeyName: fk_event_id
                     references: event(id)
               - column:
-                  name: alert_id
+                  name: stage_id
                   type: bigint
                   constraints:
-                    foreignKeyName: fk_alert_id
-                    references: alert(id)
+                    foreignKeyName: fk_stage_id
+                    references: stage(id)
+              - column:
+                  name: device_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_device_id
+                    references: device(id)
